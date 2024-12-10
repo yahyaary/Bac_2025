@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <title>Fahhemni.tn</title>
+  
   <style>
     /* General Styles */
     body {
@@ -81,21 +81,17 @@
      
       margin-top: 5rem;
     }
-
     .hero h1 {
       font-size: 3rem;
       margin: 0;
     }
-
     .hero .highlight {
       color: #ffffff;
     }
-
     .hero p {
       margin: 1rem 0;
       font-size: 1.5rem;
     }
-
     .btn {
       display: inline-block;
       margin-top: 1rem;
@@ -106,30 +102,25 @@
       border-radius: 0.5rem;
       font-weight: bold;
     }
-
     .btn:hover {
         color:white;
       transition: transform 0.3s;
       transform: scale(1.05);
     }
-
     /* Subjects Section */
     .subjects {
       padding: 3rem 1rem;
       text-align: center;
     }
-
     .subjects h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
     }
-
     .subject-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
       gap: 3rem;
     }
-
     .subject-card {
       background: #ffffff;
       border: 1px solid #ddd;
@@ -137,22 +128,18 @@
       padding: 2.5rem;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .subject-card:hover {
       transform: scale(1.05);
     }
-
     .subject-card h3 {
       margin: 0 0 1rem;
       font-size: 1.5rem;
       color: #007bff;
     }
-
     .subject-card ul {
       list-style: none;
       padding: 0;
     }
-
     .subject-card li {
       margin-bottom: 0.5rem;
     }
@@ -166,170 +153,8 @@
         color:rgb(51, 51, 51);
     }
     </style>
-    
-<style>
-  /* Chatbot Icon */
-  .chatbot-icon {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background-color: #007bff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-  }
-
-  .chatbot-icon:hover {
-    transform: scale(1.1);
-  }
-
-  .chatbot-icon img {
-    width: 30px;
-    height: 30px;
-  }
-
-  /* Chat Window */
-  .chat-window {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 350px;
-    height: 450px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-  }
-
-  .chat-header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    font-size: 18px;
-  }
-
-  .chat-body {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-  }
-
-  .chat-suggestions {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-
-  .suggestion-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s;
-  }
-
-  .suggestion-btn:hover {
-    background-color: #0056b3;
-  }
-
-  .chat-input {
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    display: flex;
-  }
-
-  .chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-
-  .chat-input button {
-    margin-left: 5px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .chat-input button:hover {
-    background-color: #0056b3;
-  }
-
-  .chat-message {
-    margin-bottom: 10px;
-  }
-
-  .chat-message.user {
-    text-align: right;
-  }
-
-  .chat-message.bot {
-    text-align: left;
-  }
-
-  .chat-message p {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 80%;
-  }
-
-  .chat-message.user p {
-    background-color: #007bff;
-    color: white;
-  }
-
-  .chat-message.bot p {
-    background-color: #f4f7fd;
-    color: #333;
-  }
-  </style>
 </head>
 <body>
-  <!-- Chatbot Icon -->
-<div class="chatbot-icon" id="chatbot-icon">
-  <img src="https://img.icons8.com/ios-filled/50/chat--v1.png" alt="Chatbot">
-</div>
-
-<!-- Chat Window -->
-<div class="chat-window" id="chat-window">
-  <div class="chat-header">Study Assistant</div>
-  <div class="chat-body" id="chat-body">
-    <div class="chat-message bot">
-      <p>مرحبًا! اختر أحد الأسئلة الجاهزة أو اكتب سؤالك.</p>
-    </div>
-  </div>
-  <div class="chat-suggestions" id="chat-suggestions">
-    <button class="suggestion-btn" data-message="ما هي قوانين نيوتن؟">ما هي قوانين نيوتن؟</button>
-    <button class="suggestion-btn" data-message="كيف أبدأ تعلم البرمجة؟">كيف أبدأ تعلم البرمجة؟</button>
-    <button class="suggestion-btn" data-message="ما هي أهم مفاهيم الفيزياء؟">ما هي أهم مفاهيم الفيزياء؟</button>
-    <button class="suggestion-btn" data-message="كيف أحل المعادلات الرياضية؟">كيف أحل المعادلات الرياضية؟</button>
-  </div>
-  <div class="chat-input">
-    <input type="text" id="chat-input" placeholder="أكتب سؤالك هنا..." style="display:none;">
-    <button id="chat-send" style="display:none;">إرسال</button>
-  </div>
 </div>
   <header id="header">
     <div class="logo">Fahhemni</div>
@@ -341,7 +166,6 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -349,7 +173,6 @@
       <p class="s">ayy haja test7a99ha mawjouda hnee...</p>
       <a href="#subjects" class="btn">EBDA A9RA</a>
     </section>
-
     <!-- Subjects Section -->
     <section class="subjects" id="subjects">
       <h2>HEDHA HOWWA <span class="highlight">El MAWJOUD</span></h2>
@@ -413,62 +236,13 @@
       </div>
     </section>
   </main>
-  
-  <script>
-    // Get elements
-    const chatbotIcon = document.getElementById('chatbot-icon');
-    const chatWindow = document.getElementById('chat-window');
-    const chatBody = document.getElementById('chat-body');
-    const chatSuggestions = document.getElementById('chat-suggestions');
-    
-    // Event listener for opening/closing the chatbot window
-    chatbotIcon.addEventListener('click', () => {
-      chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
-    });
-    
-    // Event listener for suggestion buttons
-    const suggestionButtons = document.querySelectorAll('.suggestion-btn');
-    suggestionButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const userMessage = button.getAttribute('data-message');
-        displayMessage(userMessage, 'user');
-        generateBotResponse(userMessage); // Generate response without OpenAI
-      });
-    });
-    
-    // Function to display messages in the chat window
-    function displayMessage(message, sender) {
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('chat-message', sender);
-      const messageText = document.createElement('p');
-      messageText.textContent = message;
-      messageDiv.appendChild(messageText);
-      chatBody.appendChild(messageDiv);
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }
-    
-    // Function to generate a response from the bot (without OpenAI)
-    function generateBotResponse(userMessage) {
-      // Predefined responses based on the user message
-      let botResponse = '';
-    
-      if (userMessage.includes('قوانين نيوتن')) {
-        botResponse = 'قوانين نيوتن هي: 1) القانون الأول: الجسم يبقى في حالة سكون أو حركة منتظمة ما لم تؤثر عليه قوة. 2) القانون الثاني: القوة تساوي الكتلة مضروبة في التسارع. 3) القانون الثالث: لكل فعل هناك رد فعل مساوٍ ومعاكس.';
-      } else if (userMessage.includes('تعلم البرمجة')) {
-        botResponse = 'لتعلم البرمجة، يمكنك البدء بتعلم لغات مثل Python أو JavaScript. ابحث عن دروس عبر الإنترنت أو في الكتب.';
-      } else if (userMessage.includes('مفاهيم الفيزياء')) {
-        botResponse = 'بعض المفاهيم الأساسية في الفيزياء تشمل الحركة، القوى، الطاقة، والموجات. يمكنك بدء الدراسة من خلال فهم قوانين الحركة.';
-      } else if (userMessage.includes('حل المعادلات الرياضية')) {
-        botResponse = 'لحل المعادلات الرياضية، يمكنك اتباع خطوات مثل ترتيب المعادلة، تبسيط المصطلحات، واستخدام القوانين المناسبة مثل قاعدة الجذر التربيعي أو قوانين الجبر.';
-      } else {
-        botResponse = 'عذرًا، لم أفهم سؤالك. جرب سؤال آخر.';
-      }
-    
-      displayMessage(botResponse, 'bot');
-    }
-    </script>
-  
-  
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
 
+    
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/12/09/11/20241209114905-LN7UBF78.js"></script>
+    
+    
 </body>
 </html>
